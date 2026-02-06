@@ -22,17 +22,24 @@ export default function App() {
     <OrientationGuard>
       <main className="flex items-center justify-center h-screen bg-black overflow-hidden relative">
         {!showValentinesProposal ? (
-          <motion.div
-            initial={{ opacity: 1 }}
-            animate={{ opacity: isTransitioning ? 0 : 1 }}
-            transition={{ duration: ANIM_DURATION }}
-            className="flex flex-col items-center"
-          >
-            <PhotoPairGame handleShowProposal={handleShowProposal} />
-            <div className="mt-4 md:mt-0">
+          <>
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{ opacity: isTransitioning ? 0 : 1 }}
+              transition={{ duration: ANIM_DURATION }}
+              className="flex items-center justify-center"
+            >
+              <PhotoPairGame handleShowProposal={handleShowProposal} />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 1 }}
+              animate={{ opacity: isTransitioning ? 0 : 1 }}
+              transition={{ duration: ANIM_DURATION }}
+              className="absolute bottom-8"
+            >
               <TextFooter />
-            </div>
-          </motion.div>
+            </motion.div>
+          </>
         ) : (
           <motion.div
             initial={{ opacity: 0 }}
