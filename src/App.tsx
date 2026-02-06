@@ -1,15 +1,13 @@
-"use client";
-
 import { useState } from "react";
 import { motion } from "framer-motion";
-import PhotoPairGame from "../components/PhotoPairGame";
-import ValentinesProposal from "@/components/ValentinesProposal";
-import TextFooter from "@/components/TextFooter";
-import OrientationGuard from "@/components/OrientationGuard";
+import PhotoPairGame from "./components/PhotoPairGame";
+import ValentinesProposal from "./components/ValentinesProposal";
+import TextFooter from "./components/TextFooter";
+import OrientationGuard from "./components/OrientationGuard";
 
 const ANIM_DURATION = 2;
 
-export default function Home() {
+export default function App() {
   const [showValentinesProposal, setShowValentinesProposal] = useState(false);
   const [isTransitioning, setIsTransitioning] = useState(false);
 

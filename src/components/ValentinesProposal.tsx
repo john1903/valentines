@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
-import { Playfair_Display } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import Fireworks from "@fireworks-js/react";
-import Image from "next/image";
-
-const playfairDisplay = Playfair_Display({
-  display: "swap",
-  subsets: ["latin"],
-});
 
 // 36 images
 const images = [
@@ -85,7 +78,7 @@ export default function ValentinesProposal() {
         {step === 0 && (
           <motion.h2
             key="step-0"
-            className={`text-4xl font-semibold mb-4 ${playfairDisplay.className}`}
+            className="text-4xl font-semibold mb-4 font-playfair"
             transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -97,7 +90,7 @@ export default function ValentinesProposal() {
         {step === 1 && (
           <motion.h2
             key="step-1"
-            className={`text-4xl font-semibold mb-4 ${playfairDisplay.className}`}
+            className="text-4xl font-semibold mb-4 font-playfair"
             transition={{ duration: 3 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -119,26 +112,25 @@ export default function ValentinesProposal() {
             <div className="absolute inset-0 grid grid-cols-6 opacity-10">
               {images.slice(0, 36).map((src, index) => (
                 <div key={index} className="relative h-full">
-                  <Image
+                  <img
                     src={src}
                     alt={`Memory ${index + 1}`}
-                    fill
-                    className="object-cover"
+                    className="w-full h-full object-cover"
                   />
                 </div>
               ))}
             </div>
 
             <h2
-              className={`text-5xl font-semibold mb-8 ${playfairDisplay.className}`}
+              className="text-5xl font-semibold mb-8 font-playfair"
             >
               Will you be my Valentine?
             </h2>
-            <Image
+            <img
               src="/sad_hamster.png"
               alt="Sad Hamster"
-              width={200}
-              height={200}
+              width="200"
+              height="200"
             />
             <div className="flex space-x-4 mt-10">
               <button
@@ -169,7 +161,7 @@ export default function ValentinesProposal() {
         {step === 3 && (
           <motion.div
             key="step-3"
-            className={`text-4xl font-semibold mb-4 flex flex-col justify-center items-center ${playfairDisplay.className}`}
+            className="text-4xl font-semibold mb-4 flex flex-col justify-center items-center font-playfair"
             transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -177,12 +169,11 @@ export default function ValentinesProposal() {
           >
             Thank you for accepting, I love you! 💕
             <p className="text-sm mt-4">For more information, write me!!! 💌</p>
-            <Image
+            <img
               src="/hamster_jumping.gif"
               alt="Hamster Feliz"
-              width={200}
-              height={200}
-              unoptimized
+              width="200"
+              height="200"
             />
           </motion.div>
         )}
