@@ -75,7 +75,7 @@ yarn preview
 - Add your photos to `public/game-photos/`
 - Name them from 1.jpeg to 36.jpeg
 - For best results, use square images of the same size
-- You can use JPEG format for compatibility
+- Use JPEG format for compatibility
 
 ### Modifying Text
 - Edit proposal messages in `src/components/ValentinesProposal.tsx`
