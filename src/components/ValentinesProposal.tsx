@@ -100,18 +100,18 @@ export default function ValentinesProposal() {
           </motion.h2>
         )}
         {step === 2 && (
-          <motion.div
-            key="step-2"
-            transition={{ duration: 3 }}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="flex flex-col items-center justify-center relative z-10"
-          >
-            {/* Image Grid Background */}
-            <div className="absolute inset-0 grid grid-cols-6 opacity-10">
+          <>
+            {/* Image Grid Background - fills entire viewport */}
+            <motion.div
+              key="step-2-background"
+              className="fixed inset-0 grid grid-cols-6 grid-rows-6 opacity-10 z-0"
+              transition={{ duration: 3 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.1 }}
+              exit={{ opacity: 0 }}
+            >
               {images.slice(0, 36).map((src, index) => (
-                <div key={index} className="relative h-full">
+                <div key={index} className="relative">
                   <img
                     src={src}
                     alt={`Wspomnienie ${index + 1}`}
@@ -119,13 +119,21 @@ export default function ValentinesProposal() {
                   />
                 </div>
               ))}
-            </div>
+            </motion.div>
 
-            <h2
-              className="text-5xl font-semibold mb-8 font-playfair"
+            <motion.div
+              key="step-2"
+              transition={{ duration: 3 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="flex flex-col items-center justify-center relative z-10"
             >
-              Czy zostaniesz moją Walentynką?
-            </h2>
+              <h2
+                className="text-5xl font-semibold mb-8 font-playfair"
+              >
+                Czy zostaniesz moją Walentynką?
+              </h2>
             <img
               src="/sad_hamster.png"
               alt="Smutny chomik"
@@ -157,6 +165,7 @@ export default function ValentinesProposal() {
               </button>
             </div>
           </motion.div>
+          </>
         )}
         {step === 3 && (
           <motion.div
