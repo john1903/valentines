@@ -4,10 +4,6 @@ A romantic and interactive way to ask your special someone to be your Valentine!
 
 ![Demo Preview](public/github-demo.gif)
 
-## Demo 🎮
-
-You can see the live demo of the game [here](https://valentines-proposal-visibait.vercel.app).
-
 ## Features ✨
 
 - Interactive memory card game in a heart shape layout
@@ -31,7 +27,7 @@ You can see the live demo of the game [here](https://valentines-proposal-visibai
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/visibait/valentines.git
+git clone <repository-url>
 cd valentines
 ```
 
@@ -117,13 +113,6 @@ This project is licensed under the MIT License.
 
 - Inspired by love and creativity
 - Built with React and Vite
-
-## Author ✍️
-
-visibait - [https://visibait.com]
-
-## Donate
-[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/visibait)
 
 ---
 
