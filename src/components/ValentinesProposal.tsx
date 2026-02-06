@@ -111,7 +111,7 @@ export default function ValentinesProposal() {
               exit={{ opacity: 0 }}
             >
               {images.slice(0, 36).map((src, index) => (
-                <div key={index} className="relative">
+                <div key={index} className="relative w-full h-full">
                   <img
                     src={src}
                     alt={`Wspomnienie ${index + 1}`}
