@@ -40,8 +40,8 @@ yarn install
 
 3. Replace the photos:
    - Navigate to the `public/game-photos` directory
-   - Replace the existing images (1.avif through 36.avif) with your own photos
-   - Make sure to keep the same naming convention
+   - Replace the existing images (1.jpeg through 36.jpeg) with your own photos
+   - Make sure to keep the same naming convention (1.jpeg, 2.jpeg, etc.)
    - Use photos of you and your partner together!
 
 4. Start the development server:
@@ -73,9 +73,9 @@ yarn preview
 
 ### Changing Photos
 - Add your photos to `public/game-photos/`
-- Name them from 1.avif to 36.avif
+- Name them from 1.jpeg to 36.jpeg
 - For best results, use square images of the same size
-- Convert your images to .avif format for better performance
+- You can use JPEG format for compatibility
 
 ### Modifying Text
 - Edit proposal messages in `src/components/ValentinesProposal.tsx`
