@@ -106,7 +106,7 @@ export default function ValentinesProposal() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="flex flex-col items-center"
+            className="flex flex-col items-center justify-center relative z-10"
           >
             {/* Image Grid Background */}
             <div className="absolute inset-0 grid grid-cols-6 opacity-10">
