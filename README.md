@@ -27,7 +27,7 @@ A romantic and interactive way to ask your special someone to be your Valentine!
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
+git clone https://github.com/your-username/valentines.git
 cd valentines
 ```
 
@@ -116,6 +116,6 @@ This project is licensed under the MIT License.
 
 ---
 
-Made with ❤️ for my Valentine
+Made with ❤️
 
 *Note: This project is meant for romantic purposes. Please use responsibly and spread love!*
