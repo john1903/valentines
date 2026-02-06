@@ -47,7 +47,7 @@ export default function OrientationGuard({
           Obróć urządzenie
         </h2>
         <p className="text-gray-400 text-lg max-w-xs">
-          Aby móc poprawnie grać, musisz ustawić telefon w{" "}
+          Aby móc zagrać, musisz ustawić telefon w{" "}
           <b>trybie poziomym</b>.
         </p>
       </div>

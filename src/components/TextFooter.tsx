@@ -5,7 +5,7 @@ export default function TextFooter() {
       <h1
         className="absolute left-10 bottom-5 transform -translate-y-1/2 text-white text-4xl lg:text-5xl font-bold leading-tight font-playfair"
       >
-        <span className="text-gray-400">Dopasuj</span> <br /> pary zdjęć
+        <span className="text-gray-400">Dopasuj</span> <br /> zdjęcia
       </h1>
 
       {/* Right Text */}

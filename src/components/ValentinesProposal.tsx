@@ -84,7 +84,7 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Gratulacje! Ukończyłeś grę.
+            Gratulacje! Ukończyłaś grę.
           </motion.h2>
         )}
         {step === 1 && (
@@ -179,8 +179,7 @@ export default function ValentinesProposal() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Dziękuję za akceptację, kocham Cię! 💕
-            <p className="text-sm mt-4">Po więcej informacji, napisz do mnie!!! 💌</p>
+            Dziękuję, kocham Cię! 💕
             <img
               src="/hamster_jumping.gif"
               alt="Szczęśliwy chomik"
