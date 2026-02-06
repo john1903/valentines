@@ -19,7 +19,7 @@ You can see the live demo of the game [here](https://valentines-proposal-visibai
   - Cute hamster GIFs and images
 - Elegant design with Playfair Display font
 - Fully responsive layout
-- Built with Next.js and Tailwind CSS
+- Built with React and Vite
 
 ## Prerequisites 📋
 
@@ -55,7 +55,23 @@ npm run dev
 yarn dev
 ```
 
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
+5. Open [http://localhost:5173](http://localhost:5173) in your browser
+
+## Build for Production 🏗️
+
+To create a production build:
+```bash
+npm run build
+# or
+yarn build
+```
+
+To preview the production build locally:
+```bash
+npm run preview
+# or
+yarn preview
+```
 
 ## Customization 🎨
 
@@ -66,8 +82,8 @@ yarn dev
 - Convert your images to .avif format for better performance
 
 ### Modifying Text
-- Edit proposal messages in `components/ValentinesProposal.tsx`
-- Change game instructions in `components/TextFooter.tsx`
+- Edit proposal messages in `src/components/ValentinesProposal.tsx`
+- Change game instructions in `src/components/TextFooter.tsx`
 
 ### Styling
 - The project uses Tailwind CSS for styling
@@ -76,8 +92,9 @@ yarn dev
 
 ## Tech Stack 💻
 
-- [Next.js](https://nextjs.org/)
 - [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Framer Motion](https://www.framer.com/motion/)
 - [Fireworks.js](https://fireworks.js.org/)
@@ -99,7 +116,7 @@ This project is licensed under the MIT License.
 ## Acknowledgments 🙏
 
 - Inspired by love and creativity
-- Built with Next.js 15 App Router
+- Built with React and Vite
 
 ## Author ✍️
 
