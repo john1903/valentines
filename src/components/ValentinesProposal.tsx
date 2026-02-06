@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
-import { Playfair_Display } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import Fireworks from "@fireworks-js/react";
-import Image from "next/image";
-
-const playfairDisplay = Playfair_Display({
-  display: "swap",
-  subsets: ["latin"],
-});
 
 // 36 images
 const images = [
@@ -85,25 +78,25 @@ export default function ValentinesProposal() {
         {step === 0 && (
           <motion.h2
             key="step-0"
-            className={`text-4xl font-semibold mb-4 ${playfairDisplay.className}`}
+            className="text-4xl font-semibold mb-4 font-playfair"
             transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Congratulations! You have completed the game.
+            Gratulacje! Ukończyłeś grę.
           </motion.h2>
         )}
         {step === 1 && (
           <motion.h2
             key="step-1"
-            className={`text-4xl font-semibold mb-4 ${playfairDisplay.className}`}
+            className="text-4xl font-semibold mb-4 font-playfair"
             transition={{ duration: 3 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            I have a surprise for you!
+            Mam dla Ciebie niespodziankę!
           </motion.h2>
         )}
         {step === 2 && (
@@ -119,33 +112,32 @@ export default function ValentinesProposal() {
             <div className="absolute inset-0 grid grid-cols-6 opacity-10">
               {images.slice(0, 36).map((src, index) => (
                 <div key={index} className="relative h-full">
-                  <Image
+                  <img
                     src={src}
-                    alt={`Memory ${index + 1}`}
-                    fill
-                    className="object-cover"
+                    alt={`Wspomnienie ${index + 1}`}
+                    className="w-full h-full object-cover"
                   />
                 </div>
               ))}
             </div>
 
             <h2
-              className={`text-5xl font-semibold mb-8 ${playfairDisplay.className}`}
+              className="text-5xl font-semibold mb-8 font-playfair"
             >
-              Will you be my Valentine?
+              Czy zostaniesz moją Walentynką?
             </h2>
-            <Image
+            <img
               src="/sad_hamster.png"
-              alt="Sad Hamster"
-              width={200}
-              height={200}
+              alt="Smutny chomik"
+              width="200"
+              height="200"
             />
             <div className="flex space-x-4 mt-10">
               <button
                 className="px-6 py-2 text-lg font-semibold text-white bg-gradient-to-r from-pink-500 to-rose-500 rounded-xl hover:from-pink-600 hover:to-rose-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
                 onClick={handleYesClick}
               >
-                Yes, I will! 🥰
+                Tak, zostanę! 🥰
               </button>
               <button
                 className="px-6 py-2 text-lg font-semibold text-white bg-gradient-to-r from-gray-500 to-gray-600 rounded-xl hover:from-gray-600 hover:to-gray-700 transform hover:scale-95 transition-all duration-300 shadow-lg"
@@ -161,7 +153,7 @@ export default function ValentinesProposal() {
                 onMouseEnter={() => setPosition(getRandomPosition())}
                 onClick={() => setPosition(getRandomPosition())}
               >
-                No, I won&apos;t 😢
+                Nie, nie zostanę 😢
               </button>
             </div>
           </motion.div>
@@ -169,20 +161,19 @@ export default function ValentinesProposal() {
         {step === 3 && (
           <motion.div
             key="step-3"
-            className={`text-4xl font-semibold mb-4 flex flex-col justify-center items-center ${playfairDisplay.className}`}
+            className="text-4xl font-semibold mb-4 flex flex-col justify-center items-center font-playfair"
             transition={{ duration: 1 }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
           >
-            Thank you for accepting, I love you! 💕
-            <p className="text-sm mt-4">For more information, write me!!! 💌</p>
-            <Image
+            Dziękuję za akceptację, kocham Cię! 💕
+            <p className="text-sm mt-4">Po więcej informacji, napisz do mnie!!! 💌</p>
+            <img
               src="/hamster_jumping.gif"
-              alt="Hamster Feliz"
-              width={200}
-              height={200}
-              unoptimized
+              alt="Szczęśliwy chomik"
+              width="200"
+              height="200"
             />
           </motion.div>
         )}

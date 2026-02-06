@@ -1,7 +1,4 @@
-"use client";
-
 import { motion } from "framer-motion";
-import Image from "next/image";
 import { useState, useEffect } from "react";
 
 // 18 images
@@ -93,13 +90,11 @@ export default function PhotoPairGame({
       {/* Image preload */}
       <div className="hidden">
         {images.map((image, i) => (
-          <Image
+          <img
             key={i}
             src={image}
             alt={`Image ${i + 1}`}
-            fill
             className="object-cover"
-            priority
           />
         ))}
       </div>
@@ -138,11 +133,10 @@ export default function PhotoPairGame({
                 transition={{ duration: 0.5 }}
                 style={{ backfaceVisibility: "hidden" }}
               >
-                <Image
+                <img
                   src={images[index]}
                   alt={`Imagen ${index + 1}`}
-                  fill
-                  className="rounded-sm lg:rounded-md object-cover"
+                  className="w-full h-full rounded-sm lg:rounded-md object-cover"
                 />
               </motion.div>
             )}
